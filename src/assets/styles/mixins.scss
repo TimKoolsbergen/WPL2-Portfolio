@@ -1,0 +1,17 @@
+@import 'variables';
+
+@mixin gradient-text() {
+    width: fit-content;
+    background: linear-gradient(-135deg, $secondary-color, $primary-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin flex($align: center, $justify: center, $direction: row, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
