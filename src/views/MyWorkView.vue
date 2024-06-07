@@ -1,36 +1,39 @@
 <script>
-import WPL1Component from '@/components/WPL1Component.vue'
-import WPL2Component from '@/components/WPL2Component.vue'
+import BreakComponent from '@/components/BreakComponent.vue'
+import WebWorkComponent from '@/components/WebWorkComponent.vue'
+import DesignWorkComponent from '@/components/DesignWorkComponent.vue'
 
 export default {
     data() {
         return {
-            selected: 'wpl1'
+            selected: 'web'
         }
     },
     components: {
-        WPL1Component,
-        WPL2Component
+        BreakComponent,
+        WebWorkComponent,
+        DesignWorkComponent
     }  
 }
 </script>
 
 <template>
-    <div class="wpl-container">
+    <div class="work-container">
         <div class="toggle-buttons">
-            <input type="radio" id="wpl1" value="wpl1" v-model="selected">
-            <label for="wpl1" :class="{ active: selected === 'wpl1' }">WPL1</label>
+            <input type="radio" id="web" value="web" v-model="selected">
+            <label for="web" :class="{ active: selected === 'web' }">Web</label>
 
-            <input type="radio" id="wpl2" value="wpl2" v-model="selected">
-            <label for="wpl2" :class="{ active: selected === 'wpl2' }">WPL2</label>
+            <input type="radio" id="design" value="design" v-model="selected">
+            <label for="design" :class="{ active: selected === 'design' }">Design</label>
         </div>
     </div>
-    <WPL1Component class="wplComponent" v-if="selected === 'wpl1'"/>
-    <WPL2Component class="wplComponent" v-if="selected === 'wpl2'"/>
+    <WebWorkComponent class="workComponent" v-if="selected === 'web'"/>
+    <DesignWorkComponent class="workComponent" v-if="selected === 'design'"/>
+    <BreakComponent/>
 </template>
 
 <style scoped lang="scss">
-   .wpl-container {
+   .work-container {
         @include flex($direction: column);
         margin: $font-med 0;
 
@@ -43,6 +46,8 @@ export default {
                 display: none; 
             }
             label {
+                text-align: center;
+                width: 50%;
                 padding: 0.5rem 1rem;
                 cursor: pointer;
                 @include transition();

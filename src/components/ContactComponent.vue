@@ -27,6 +27,7 @@
 
 <template>
 <div class="contact-info">
+    <h4>Tim Koolsbergen</h4>
     <p v-for="(contact, index) in contactInfo">{{ contact.text }}
         <span @click="copyToClipboard(contact.value)" @mouseenter="showTooltip = true" @mouseleave="showTooltip = false">{{ contact.value }}
             <span v-if="showTooltip" class="tooltip">Click to copy</span>

@@ -11,7 +11,8 @@
 body {
     background-color: $bg-color;
     color: $text-color;
-    margin: 0 10vw;
+    margin: 0 auto;
+    width: $view-clamp;
 }
 
 ::-webkit-scrollbar { // scrollbar width
@@ -45,7 +46,7 @@ h1 {
 }
 h2 {
     font-size: $font-large;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: -0.01em;
     color: $primary-color;
     text-align: center;
@@ -54,18 +55,19 @@ h2 {
 h3 {
     font-size: $font-med;
     color: $text-color;
-    font-weight: 300;
+    font-weight: 400;
 }
 h4 {
     font-size: $font-small;
     color: $primary-color;
-    font-weight: 300;
+    font-weight: 400;
 }
 p {
     font-size: $font-small;
+    font-weight: 300;
 }
 button {
-    padding: 1rem 2rem;
+    padding: $font-small $font-xl;
     border: 2px solid $primary-color;
     border-radius: 2rem;
     background-color: $bg-color;
@@ -73,6 +75,7 @@ button {
     font-size: $font-small;
     font-weight: bold;
     transition: all 200ms;
+    cursor: pointer;
 
     &:hover {
         background-color: rgba($primary-color, 0.9);

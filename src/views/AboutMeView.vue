@@ -52,14 +52,14 @@ export default {
     <section class="header-section">
       <h1>TIM</h1>
       <div id="profile-image">
-        <img src="" alt="image of Tim Koolsbergen">
+        <img src="\assets\images\ProfielFoto.jpg" alt="image of Tim Koolsbergen">
       </div>
-      <button @click.prevent="scrollToContact">Contact me!</button>
+      <button @click.prevent="scrollToContact">Contact</button>
     </section>
-
+    <BreakComponent/>
     <section class="about-me-section">
       <h2>Over mij</h2>
-      <p>Mijn naam is Tim Koolsbergen, ik ben student Digitale Vormgeving aan de PXL in Hasselt en ik wil als web developer gaan werken.</p>
+      <p>Mijn naam is <span>Tim Koolsbergen</span>, ik ben student Digitale Vormgeving aan de PXL in Hasselt en ik wil als web developer gaan werken.</p>
       <h3>Interesses</h3>
       <p>In mijn vrije tijd doe ik onder andere graag wandelen, muurklimmen, bordspellen spelen en zonnen.</p>
     </section>
@@ -76,9 +76,11 @@ export default {
       <ContactComponent/>
     </section>
   </main>
+  <BreakComponent/>
 </template>
 
 <style scoped lang="scss">
+
 header {
   @include flex($direction: column);
   
@@ -87,15 +89,21 @@ header {
     margin: $font-med 0;
 
     #profile-image {
-      
+      img {
+        object-fit: cover;
+      }
     }
-  }
-  .about-me-section {
     
+  }
+  
+  .about-me-section {
     gap: 0;
 
     p {
       margin: $font-small 0 $font-med 0;
+      span {
+        color: $primary-color;
+      }
     }
   }
 }

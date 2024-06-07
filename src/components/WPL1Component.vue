@@ -1,4 +1,10 @@
 <script>
+import BreakComponent from '@/components/BreakComponent.vue'
+export default {
+    components: {
+        BreakComponent,
+    }  
+}
 
 </script>
 
@@ -11,7 +17,7 @@
             <a href="https://miro.com/app/board/uXjVN5gcTmY=/?share_link_id=291638365652" target="_blank" class="anchorLink">Link naar Miro bord</a>
         </div>
         <div class="section-image">
-            <img src="" alt="Afbeelding van POP opdracht">
+            <img src="\assets\images\Kernkwadrant3-min.png" alt="Afbeelding van POP opdracht">
         </div>
     </section>
     <section class="werkveld-section">
@@ -21,7 +27,7 @@
             <a href="https://miro.com/app/board/uXjVN5gcTmY=/?share_link_id=291638365652" target="_blank" class="anchorLink">Link naar Miro bord</a>
         </div>
         <div class="section-image">
-            <img src="" alt="Afbeelding van Werkveldverkenning opdracht">
+            <img src="\assets\images\reflectieSeminaries-min.png" alt="Afbeelding van Werkveldverkenning opdracht">
         </div>
     </section>
     <section class="dashboard-section">
@@ -31,9 +37,10 @@
             <a href="https://miro.com/app/board/uXjVNXDiiZw=/" target="_blank" class="anchorLink">Link naar groep Miro bord</a>
         </div>
         <div class="section-image">
-            <img src="" alt="Afbeelding van Dashboard CV">
+            <img src="\assets\images\WplDashboardCV-min.png" alt="Afbeelding van Dashboard CV">
         </div>
     </section>
+    <BreakComponent/>
     <div class="eindreflectie">
         <h2>Eindreflectie</h2>
         <section>
@@ -61,11 +68,16 @@
 section {
     @include flex($direction: column, $gap: $font-small);
     margin: $font-large auto;
-    width: clamp(300px, 80vw, 800px);
+    width: 100%;
 
     .section-text {
         @include flex($direction: column, $gap: $font-small);
         text-align: center;
+    }
+    .section-image {
+        img {
+            height: fit-content;
+        }
     }
 
     a {

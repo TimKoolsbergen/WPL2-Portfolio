@@ -6,10 +6,10 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <nav>
     <RouterLink to="/" class="nav-item active">
-      ME
+      TIM
     </RouterLink>
     <RouterLink to="/work" class="nav-item">
-      WORK
+      WERK
     </RouterLink>
     <RouterLink to="/wpl" class="nav-item">
       WPL
