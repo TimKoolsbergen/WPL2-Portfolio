@@ -18,15 +18,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView/>
  
-
-
-
-<!--
- <div class="test-container">
-  <div class="box-1"></div>
-  <div class="box-2"></div>
- </div>
--->
+  <footer>
+    <h4>Copyright @ Tim Koolsbergen, 2024</h4>
+  </footer>
 </template>
 
 <style scoped lang="scss">
@@ -49,12 +43,11 @@ nav {
     border-radius: 0 0 .5rem .5rem;
     color: $text-color;
     font-size: $font-small;
-    // font-weight: bold;
+    font-weight: 600;
     text-align: center;
     text-decoration: none;
     @include transition();
 
-   
     &:hover {
       background-color: rgba($bg-color, 1);
       border-color: $primary-color;
@@ -62,26 +55,19 @@ nav {
     }
   }
 
-  .router-link-active { // misschien html data property gebruiken
+  .router-link-active { 
     border-color: $primary-color;
     color: $primary-color;
     height: 2.8rem;
   }
 }
 
-/*
-.test-container {
-  width: 20rem;
-  height: 10rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  @include flex($justify: space-around);
-
-  div {
-    height: 5rem;
-    width: 5rem;
-    background-color: bisque;
-  }
-
+footer {
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  @include flex();
+  background-color: rgba(#000, 0.5);
 }
-*/
 </style>

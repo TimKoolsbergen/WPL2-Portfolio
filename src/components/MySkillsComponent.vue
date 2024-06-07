@@ -91,7 +91,7 @@
 
             .skills-description {
                 @include flex($gap: $font-small, $direction: column);
-                margin: $font-med 0;
+                margin: $font-small 0;
                 
                 span {
                     color: $primary-color;
