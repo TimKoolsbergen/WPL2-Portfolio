@@ -1,4 +1,5 @@
 <script>
+import BreakComponent from '@/components/BreakComponent.vue'
 import WPL1Component from '@/components/WPL1Component.vue'
 import WPL2Component from '@/components/WPL2Component.vue'
 
@@ -9,6 +10,7 @@ export default {
         }
     },
     components: {
+        BreakComponent,
         WPL1Component,
         WPL2Component
     }  
@@ -27,6 +29,7 @@ export default {
     </div>
     <WPL1Component class="wplComponent" v-if="selected === 'wpl1'"/>
     <WPL2Component class="wplComponent" v-if="selected === 'wpl2'"/>
+    <BreakComponent/>
 </template>
 
 <style scoped lang="scss">
