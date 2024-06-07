@@ -4,12 +4,19 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <h1 id="name-text">TIM</h1>
-    <div id="profile-image">
-      <img src="" alt="image of Tim Koolsbergen">
-    </div>
-  </header>
+  <nav>
+    <RouterLink to="/" class="nav-item active">
+      ME
+    </RouterLink>
+    <RouterLink to="/work" class="nav-item">
+      WORK
+    </RouterLink>
+    <RouterLink to="/wpl" class="nav-item">
+      WPL
+    </RouterLink>
+  </nav>
+
+  <RouterView/>
  
 
 
@@ -24,22 +31,41 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped lang="scss">
 
+nav {
+  @include flex($justify: space-between, $align: flex-start);
+  position: fixed;
+  top: 0;
+  left: 10vw;
+  right: 10vw;
 
-header {
-  @include flex($direction: column, $gap: 1rem);
-  margin: 2rem 0;
-
-  #name-text {
-    @include gradient-text();
-    font-size: $font-xl; 
-    font-weight: bold;
-    letter-spacing: -0.02em;
+  .nav-item {
+    @include flex($align: flex-end);
+    padding-bottom: 0.5rem;
+    background-color: rgba($bg-color, 0.9);
+    width: 30%;
+    height: 2.4rem;
+    border: 2px solid $text-color;
+    border-top: none;
+    border-radius: 0 0 .5rem .5rem;
+    color: $text-color;
+    font-size: $font-small;
+    // font-weight: bold;
     text-align: center;
+    text-decoration: none;
+    @include transition();
+
+   
+    &:hover {
+      background-color: rgba($bg-color, 1);
+      border-color: $primary-color;
+      color: $primary-color;
+    }
   }
-  #profile-image {
-    width: 80vw;
-    height: 80vw;
-    background-color: black;
+
+  .router-link-active { // misschien html data property gebruiken
+    border-color: $primary-color;
+    color: $primary-color;
+    height: 2.8rem;
   }
 }
 

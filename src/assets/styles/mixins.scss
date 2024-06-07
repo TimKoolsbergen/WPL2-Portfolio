@@ -2,9 +2,10 @@
 
 @mixin gradient-text() {
     width: fit-content;
-    background: linear-gradient(-135deg, $secondary-color, $primary-color);
+    background: linear-gradient(135deg, rgba($text-color, 1), rgba(#000, 1)); 
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
+    color: rgba($primary-color, 0.9);
 }
 
 @mixin flex($align: center, $justify: center, $direction: row, $gap: 0, $wrap: nowrap) {
@@ -14,4 +15,8 @@
     flex-direction: $direction;
     gap: $gap;
     flex-wrap: $wrap;
+}
+
+@mixin transition($transition: all) {
+    transition: $transition 200ms;
 }
