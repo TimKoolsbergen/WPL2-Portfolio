@@ -19,7 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView/>
  
   <footer>
-    <h4>Copyright @ Tim Koolsbergen, 2024</h4>
+    <h4>Copyright @ Tim Koolsbergen 2024</h4>
   </footer>
 </template>
 
@@ -69,5 +69,6 @@ footer {
   left: 0;
   @include flex();
   background-color: rgba(#000, 0.5);
+  margin-top: $font-med;
 }
 </style>
