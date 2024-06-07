@@ -87,11 +87,7 @@ header {
     margin: $font-med 0;
 
     #profile-image {
-      @include flex();
-      width: clamp(5rem, 80vw, 600px);
-      height: clamp(5rem, 80vw, 600px);
-      background-color: black;
-      border-radius: 2rem
+      
     }
   }
   .about-me-section {
